@@ -16,6 +16,14 @@ class Controller {
 			$this->twig = new \Twig\Environment($this->loader);
 		}
 
+		if (!array_key_exists('url', $data)) {
+			$data['url'] = AppConfiguration::$APP_URL;
+		}
+
+		if (!array_key_exists('assets', $data)) {
+			$data['assets'] = AppConfiguration::$APP_URL . 'public/';
+		}
+		
 		echo $this->twig->render($view . '.html.twig', $data);
 	}
 
