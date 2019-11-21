@@ -16,7 +16,7 @@ class Controller {
 			$this->twig = new \Twig\Environment($this->loader);
 		}
 
-		echo $this->twig->render($view . '.html', $data);
+		echo $this->twig->render($view . '.html.twig', $data);
 	}
 
 	public function root() {
