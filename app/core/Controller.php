@@ -31,4 +31,8 @@ class Controller {
 	public function get($var = '') {
 		return (isset($_GET[$var])) ? $_GET[$var] : null;
 	}
+	
+	public function assets($path = '') {
+		return AppConfiguration::$APP_URL . 'public/';
+	}
 }
