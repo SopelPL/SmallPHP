@@ -22,6 +22,7 @@ class AppConfiguration {
 	*
 	**/
 	static $APP_DEFAULT_CONTROLLER = "home";
+	static $APP_URL = "http://localhost/";
 	static $APP_DATABASE_ADDON = false;
 	static $APP_WHOOPS_ADDON = false;
 
